@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>view-contact</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="contact.nombre" name="nombre" ngModel required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Organización</ion-label>
+    <ion-input type="text" [(ngModel)]="contact.organizacion" name="organizacion" ngModel required></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label>Numero</ion-label>
+      <ion-input type="text" [(ngModel)]="contact.numero" name="movil" ngModel></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Correo</ion-label>
+    <ion-input type="text" [(ngModel)]="contact.correo" name="correo" ngModel></ion-input>
+  </ion-item>
+
+
+  <button ion-button block (click)="onUpdateContact(contact)">Modificar</button>
+  <button ion-button block (click)="onRemoveContact($event, contact)">Eliminar</button>
+</ion-content>

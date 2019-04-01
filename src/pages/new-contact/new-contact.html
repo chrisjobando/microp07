@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-navbar color="dark">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Nuevo contacto</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding color="primary">
+  <form (ngSubmit)="onAddContact(f.value)" #f="ngForm">
+    <ion-list>
+      <ion-item>
+        <ion-label>Nombre</ion-label>
+        <ion-input type="text" placeholder="Texto" name="name"
+          ngModel required></ion-input>
+      </ion-item>
+  		<ion-item>
+      <ion-label>Organización</ion-label>
+      <ion-input type="text" placeholder="Texto" name="organization"
+        ngModel required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Numero</ion-label>
+        <ion-input type="text" placeholder="666666666" name="mobile"
+        ngModel></ion-input>
+      </ion-item>
+  		<ion-item>
+        <ion-label>Correo</ion-label>
+        <ion-input type="text" placeholder="name@example.com" name="email"
+        ngModel></ion-input>
+      </ion-item>
+    </ion-list>
+    <button ion-button block type="submit" [disabled]="!f.valid">Aceptar</button>
+  </form>
+</ion-content>
