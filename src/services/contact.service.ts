@@ -9,6 +9,7 @@ export class ContactService {
     // "email":"andres@example.com"}];
 
     private contactsRef = this.db.list<Contact>('AgendaFirebase');
+
     constructor(private db:AngularFireDatabase) {
 
     }

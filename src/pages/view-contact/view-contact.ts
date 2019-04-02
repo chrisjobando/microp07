@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import​ { ​Contact​ } ​ from​ '../../models/contact.model';
 import​ { ​ContactService​ } ​from​ ​'../../services/contact.service'​;
-import { l } from '@angular/core/src/render3';
 
 @IonicPage()
 @Component({
