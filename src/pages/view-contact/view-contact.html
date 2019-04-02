@@ -1,28 +1,35 @@
 <ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Agenda Electrónica</ion-title>
+  </ion-navbar>
+
   <ion-navbar>
-    <ion-title>view-contact</ion-title>
+    <ion-title>{{contact.name}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
   <ion-item>
     <ion-label>Nombre</ion-label>
-    <ion-input type="text" [(ngModel)]="contact.nombre" name="nombre" ngModel required></ion-input>
+    <ion-input type="text" [(ngModel)]="contact.name" name="name" ngModel required></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label>Organización</ion-label>
-    <ion-input type="text" [(ngModel)]="contact.organizacion" name="organizacion" ngModel required></ion-input>
+    <ion-input type="text" [(ngModel)]="contact.organization" name="organization" ngModel required></ion-input>
   </ion-item>
 
   <ion-item>
       <ion-label>Numero</ion-label>
-      <ion-input type="text" [(ngModel)]="contact.numero" name="movil" ngModel></ion-input>
+      <ion-input type="text" [(ngModel)]="contact.mobile" name="mobile" ngModel></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label>Correo</ion-label>
-    <ion-input type="text" [(ngModel)]="contact.correo" name="correo" ngModel></ion-input>
+    <ion-input type="text" [(ngModel)]="contact.email" name="email" ngModel></ion-input>
   </ion-item>
 
 

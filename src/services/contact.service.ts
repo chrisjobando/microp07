@@ -24,10 +24,10 @@ export class ContactService {
     }
 
     updateContact(value: Contact) {
-
+        return this.contactsRef.update(value.key,value);
     }
 
     removeContact(value:Contact) {
-
+        return this.contactsRef.remove(value.key);
     }
 }

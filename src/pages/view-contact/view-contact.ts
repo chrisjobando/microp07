@@ -28,9 +28,4 @@ export class ViewContactPage {
     this.contactService.removeContact(value);
     this.navCtrl.pop();
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ViewContactPage');
-  }
-
 }

@@ -14,7 +14,7 @@
 
 <ion-content padding color="primary">
   <ion-list>
-    <button ion-item *ngFor="let contact of contacts">
+    <button ion-item *ngFor="let contact of contacts$ | async" (click)="onItemTapped($event, contact)">
       <p><strong>Nombre: </strong>{{contact.name}}</p>
       <p><strong>Organización:</strong>{{contact.organization}}</p>
       <p><strong>Móvil: </strong>{{contact.mobile}}</p>

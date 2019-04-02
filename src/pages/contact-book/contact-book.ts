@@ -29,9 +29,8 @@ export class ContactBookPage {
         changes => {
           return changes.map(c => ({
             key: c.payload.key, ...c.payload.val()
-          }))
-        }
-      )
+          }));
+        });
   }
 
   onLoadContactsPage() {

@@ -19,7 +19,9 @@ export class NewContactPage {
 
   onAddContact(value:
     {name:string, organization:string, mobile:string, email:string}) {
-      this.contactService.addContact(value);
+      this.contactService.addContact(value).then(ref => {
+        console.log(ref.key);
+      });
       this.navCtrl.pop();
   }
 
